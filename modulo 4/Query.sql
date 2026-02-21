@@ -1,0 +1,12 @@
+insert into curso(Nombre) value ('POO');
+select*from curso;
+insert into estudiante(nombres,apellidos,codcurso,foto) value('juan carlos','Huertas Guzman',2,'jhuertas.png');
+select*from estudiante;
+insert into asignatura(nombre,codcurso) value ('PROGRAMADOR JUNIOR',2);
+select*from asignatura;
+insert into notas(codestudiante,codasignatura) value(2,1);
+select*from notas;
+update curso set nombre='REDES' where codcurso=2;
+update estudiante set nombres ='miguel angel',apellidos= 'Duran Duran' where codestudiante =1;
+update notas set notas01 =20,notas02=13,notas03=15 where codestudiante =2 and codasignatura =1;
+delete from curso where codcurso=2;

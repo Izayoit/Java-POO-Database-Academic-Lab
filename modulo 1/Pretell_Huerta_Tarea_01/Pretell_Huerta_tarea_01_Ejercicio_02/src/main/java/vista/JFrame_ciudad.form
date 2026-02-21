@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="65" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="10" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="lbl_Nescuelas" min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="lbl_ciudad" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lbl_Nhospitales" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lbl_Npoblacion" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btn_consultar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btn_cerrar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="txt_N_hospitales" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="txt_ciudad" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="txt_N_escuelas" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="txt_N_poblacion" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="116" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btn_guardar" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_limpiar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_ciudad" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_ciudad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_N_hospitales" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_Nhospitales" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_N_escuelas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_Nescuelas" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_N_poblacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_Npoblacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="70" max="32767" attributes="0"/>
+                  <Component id="btn_limpiar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btn_cerrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_consultar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_guardar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lbl_ciudad">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pais:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_Nhospitales">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="N&#xb0;hospitales:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_Nescuelas">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="N&#xb0;Escuelas:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_Npoblacion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="N&#xb0;poblaci&#xf3;n:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_cerrar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="cerrar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cerrarActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_limpiar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="limpiar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_limpiarActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_consultar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="consultar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_consultarActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_ciudad">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_N_hospitales">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_N_escuelas">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_N_poblacion">
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_guardar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="guardar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_guardarActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

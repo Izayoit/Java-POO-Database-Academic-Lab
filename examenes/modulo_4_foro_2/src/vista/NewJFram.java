@@ -1,0 +1,282 @@
+
+package vista;
+
+import accesoDB.ConectarDB;
+import control.usuarioDAO;
+import javax.swing.JOptionPane;
+import modelo.usuarios;
+
+
+public class NewJFram extends javax.swing.JDialog {
+  private int Tipo_Ope = 0;
+    private usuarios Elemento;
+    
+    public NewJFram(java.awt.Frame parent, boolean modal) {
+       super(parent, modal);
+        initComponents();
+         setLocationRelativeTo(parent);
+        Actualizar_Tabla();
+        Estado_Controles(false);
+        ConectarDB.ObtenerConexion();
+    }
+
+    
+
+    
+ public void Actualizar_Tabla() {
+        usuarioDAO.ConsultarTodos(tbl_datos);
+        
+    }
+    
+    private void Estado_Controles(boolean estado) {
+        txt_Nombre.setEnabled(estado);
+        btn_Nuevo.setEnabled(!estado);
+        btn_Editar.setEnabled(!estado);
+        btn_Guardar.setEnabled(estado);
+        btn_Cancelar.setEnabled(estado);
+        btn_Eliminar.setEnabled(!estado);
+        btn_Cerrar.setEnabled(!estado);
+        tbl_datos.setEnabled(!estado);
+    }
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        txt_Nombre = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbl_datos = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        btn_Nuevo = new javax.swing.JButton();
+        btn_Editar = new javax.swing.JButton();
+        btn_Guardar = new javax.swing.JButton();
+        btn_Cancelar = new javax.swing.JButton();
+        btn_Eliminar = new javax.swing.JButton();
+        btn_Cerrar = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos del Curso"));
+
+        jLabel1.setText("Nombre:");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txt_Nombre)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txt_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tbl_datos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tbl_datos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbl_datosMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tbl_datos);
+
+        jPanel2.setLayout(new java.awt.GridLayout(6, 0, 0, 5));
+
+        btn_Nuevo.setText("Nuevo");
+        btn_Nuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_NuevoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Nuevo);
+
+        btn_Editar.setText("Editar");
+        btn_Editar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_EditarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Editar);
+
+        btn_Guardar.setText("Guardar");
+        btn_Guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_GuardarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Guardar);
+
+        btn_Cancelar.setText("Cancelar");
+        btn_Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CancelarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Cancelar);
+
+        btn_Eliminar.setText("Eliminar");
+        btn_Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_EliminarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Eliminar);
+
+        btn_Cerrar.setText("Cerrar");
+        btn_Cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CerrarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Cerrar);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 125, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void tbl_datosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_datosMouseClicked
+        int fila = tbl_datos.getSelectedRow();
+        if (fila != -1) {
+            int codigo = Integer.parseInt(
+                tbl_datos.getValueAt(fila, 0).toString()
+            );
+            Elemento = usuarioDAO.ConsultarUno(codigo);
+            if (Elemento != null) {
+                txt_Nombre.setText(Elemento.getNombre());
+
+            }
+        }
+    }//GEN-LAST:event_tbl_datosMouseClicked
+
+    private void btn_NuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_NuevoActionPerformed
+        Estado_Controles(true);
+        Tipo_Ope = 1;
+    }//GEN-LAST:event_btn_NuevoActionPerformed
+
+    private void btn_EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EditarActionPerformed
+        Estado_Controles(true);
+
+        Tipo_Ope = 2;
+    }//GEN-LAST:event_btn_EditarActionPerformed
+
+    private void btn_GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GuardarActionPerformed
+        Estado_Controles(false);
+        String nombre = txt_Nombre.getText();
+        switch (Tipo_Ope) {
+            case 1:
+            Elemento = new usuarios();
+            Elemento.setNombre(nombre);
+            usuarioDAO.Insertar(Elemento);
+            break;
+            case 2: Elemento.setNombre(nombre);
+            usuarioDAO.Actualizar(Elemento);
+            break;
+        }
+        Actualizar_Tabla();
+        txt_Nombre.setText("");
+
+        Tipo_Ope = 0;
+        Elemento = null;
+    }//GEN-LAST:event_btn_GuardarActionPerformed
+
+    private void btn_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CancelarActionPerformed
+        Estado_Controles(false);
+        Tipo_Ope = 0;
+    }//GEN-LAST:event_btn_CancelarActionPerformed
+
+    private void btn_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EliminarActionPerformed
+        int rpta = JOptionPane.showConfirmDialog(this, "desea eliminar?","Eliminacion",JOptionPane.YES_NO_OPTION);
+        if(rpta== JOptionPane.YES_OPTION){
+            if(Elemento != null){
+                usuarioDAO.Eliminar(Elemento);
+                Elemento =null;
+                Actualizar_Tabla();
+            }else{JOptionPane.showMessageDialog(this, "ningun curso ha sido elimiando");}
+        }
+    }//GEN-LAST:event_btn_EliminarActionPerformed
+
+    private void btn_CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CerrarActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btn_CerrarActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+       
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                NewJFram dialog = new NewJFram(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_Cancelar;
+    private javax.swing.JButton btn_Cerrar;
+    private javax.swing.JButton btn_Editar;
+    private javax.swing.JButton btn_Eliminar;
+    private javax.swing.JButton btn_Guardar;
+    private javax.swing.JButton btn_Nuevo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tbl_datos;
+    private javax.swing.JTextField txt_Nombre;
+    // End of variables declaration//GEN-END:variables
+}
